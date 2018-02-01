@@ -1,0 +1,88 @@
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+header {
+  position: absolute;
+  z-index: 7;
+  width: 27%;
+}
+
+nav {
+  position: relative;
+}
+
+nav > ul {
+  padding: 0;
+  list-style-type: none;
+  position: absolute;
+  top: 21vh;
+  left: 5%;
+}
+
+.nav-el {
+  position: relative;
+}
+
+.nav-el > a {
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  margin-top: 5vh;
+}
+
+.nav-el > a::after {
+  content: "";
+  position: absolute;
+  top: 7.9vh;
+  left: 0vw;
+  width: 0%;
+  height: 0.13vh;
+  background-color: #fff;
+  transition: all 0.37s ease-in;
+}
+
+.nav-el:hover > a {
+  font-size: 2.3vh;
+}
+
+.nav-el:hover > a::after {
+  width: 150px;
+}
+
+.logo {
+  position: absolute;
+  opacity: 0;
+}
+
+#home {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-image: url('src/backg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.page {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.home-img {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  overflow: hidden;
+}
+
+.home-img > .left > img,
+.home-img > .right > img {
+  width: 100%;
+}

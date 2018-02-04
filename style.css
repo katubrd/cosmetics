@@ -1,3 +1,13 @@
+@font-face {
+    font-family: 'alterlightregular';
+    src: url('fonts/alterlight-regular-webfont.woff2') format('woff2'),
+         url('fonts/alterlight-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,300i,900');
+
 body {
   margin: 0;
   padding: 0;
@@ -11,7 +21,8 @@ header {
 }
 
 nav {
-  position: relative;
+  position: fixed;
+  left: 0.5vw;
 }
 
 nav > ul {
@@ -26,12 +37,19 @@ nav > ul {
   position: relative;
 }
 
+#nav > .active > a {
+  color: #33d9b2;
+}
+
 .nav-el > a {
   display: inline-block;
   text-decoration: none;
   text-transform: uppercase;
-  color: #fff;
+  color: #484849;
   margin-top: 5vh;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+
 }
 
 .nav-el > a::after {
@@ -50,39 +68,210 @@ nav > ul {
 }
 
 .nav-el:hover > a::after {
-  width: 150px;
+  width: 123%;
 }
 
-.logo {
-  position: absolute;
-  opacity: 0;
+.nav-el:first-child:hover a::after {
+  width: 89%;
 }
 
-#home {
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-  background-image: url('src/backg.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+.nav-el:nth-child(2):hover a::after {
+  width: 97%
+}
+
+.nav-el:last-child:hover a::after {
+  width: 93%;
 }
 
 .page {
   width: 100%;
-  height: 100vh;
+  height: 105vh;
   overflow: hidden;
+  background-color: #F9F7F9;
 }
 
-.home-img {
+#home {
   width: 100%;
-  height: 100vh;
+  height: 110vh;
+  overflow: hidden;
+  background-color: #4d4d4e;
+  background-image: url('src/backg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.logo-box {
+  width: 100%;
+  height:45vh;
+  position: relative;
+  z-index: 3;
+}
+
+h1 {
+  display: inline-block;
+  position: absolute;
+  left: -50vh;
+}
+
+.logo {
+  position: absolute;
+  width: 33%;
+  height: 87%;
+  top: 67%;
+  left: 33%;
+}
+
+.logo-code-class {
+  width: 100%;
+  height: auto;
+}
+
+.logo-svg-class {
+  fill:#FFFFFF;
+  stroke:#FFFFFF;
+  stroke-miterlimit:10;
+}
+
+#mission {
+  position: relative;
+}
+
+#mission > * {
+  display: inline-block;
+  position: absolute;
+}
+
+#mission > h3 {
+  opacity : 0;
+}
+
+#mission > h4 {
+  font-size: 13vh;
+  top: 23vh;
+  left: 19.7vw;
+  margin: 0;
+  padding: 0;
+  width: 33%;
+  font-family: 'alterlightregular';
+  line-height: 13vh;
+}
+
+#mission > p {
+  width: 33%;
+  top: 65vh;
+  left: 15vw;
+  font-family: 'Roboto', sans-serif;
+  text-align: left;
+  font-weight: 100;
+  line-height: 3vh;
+
+}
+
+#mission > img {
+  width: 29%;
+  top: 7vh;
+  right: 13vw;
+}
+
+#cosmetics {
   display: grid;
-  grid-template-columns: 50% 50%;
-  overflow: hidden;
+  grid-template-rows: 10% 30% 30% 30%;
+  height: auto;
+  justify-items: center;
 }
 
-.home-img > .left > img,
-.home-img > .right > img {
+.salt {
+  width: 73%;
+  height: 73vh;
+  margin-bottom: 7vh;
+  margin-top: 3vh;
+  position: relative;
+  /* background-color: yellow; */
+}
+
+.salt-bottle {
+  width: 33%;
+  position : absolute;
+  top: 13vh;
+  left: 13vw;
+}
+
+.deco-box,
+.deco-box2 {
   width: 100%;
+  height: 33vh;
+  position: absolute;
+}
+
+.deco-box {
+  background-color: #ffdd59;
+  height: 27vh;
+  top: 10vh
+}
+
+.deco-box2 {
+  background-color: #F9F7F9;
+  width: 31%;
+  height: 60vh;
+  top: 7vh;
+  left: 9vw;
+}
+
+.salt-deco {
+  width: 29%;
+  position : absolute;
+  top: 9vh;
+  left: 7vw;
+}
+
+.title {
+  position: absolute;
+  font-size: 9vh;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  right: 9vw;
+  top: 7vh;
+}
+
+.description {
+  position: absolute;
+  font-size: 3vh;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  right: 9vw;
+  top: 29vh;
+}
+
+.description:after {
+  position: relative;
+  content: '';
+  width: 0%;
+  height: 0.7vh;
+  background-color: #ffdd59;
+  top: 2vh;
+  left: -1vh;
+  transition: all 0.7s linear 0.1s;
+}
+
+.description:hover:after {
+  width: 120%;
+}
+
+.ingredients {
+  width: 33%;
+  position: absolute;
+  font-size: 2.3vh;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  text-transform: uppercase;
+  right: 9vw;
+  top: 43vh;
+  text-align: right;
+}
+
+#contact {
 }

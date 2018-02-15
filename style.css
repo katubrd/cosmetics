@@ -37,10 +37,6 @@ nav > ul {
   position: relative;
 }
 
-#nav > .active > a {
-  color: #33d9b2;
-}
-
 .nav-el > a {
   display: inline-block;
   text-decoration: none;
@@ -49,7 +45,6 @@ nav > ul {
   margin-top: 5vh;
   font-family: 'Roboto', sans-serif;
   font-weight: 100;
-
 }
 
 .nav-el > a::after {
@@ -65,6 +60,9 @@ nav > ul {
 
 .nav-el:hover > a {
   font-size: 2.3vh;
+}
+#nav > .nav-el > .active {
+  color: #33d9b2;
 }
 
 .nav-el:hover > a::after {
@@ -93,7 +91,6 @@ nav > ul {
 #home {
   width: 100%;
   height: 110vh;
-  overflow: hidden;
   background-color: #4d4d4e;
   background-image: url('src/backg.png');
   background-size: cover;

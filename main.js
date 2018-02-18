@@ -40,7 +40,7 @@ function updateMenuOnScroll(){
     });
 
      function update() {
-      let scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
+      let scrollPosition = (document.documentElement.scrollTop || document.body.scrollTop) + (window.innerHeight / 2);
 
       for (i in sections) {
         if (sections[i] <= scrollPosition) {
@@ -52,10 +52,18 @@ function updateMenuOnScroll(){
     window.addEventListener('scroll', update, false);
 }
 //animating logo in header
-// function drawLogo(){
-//
-// }
+function drawElement(){
+  let mask = document.getElementById('logoMask'),
+      group = document.getElementById('letters'),
+      paths = document.getElementsByTagName('path'),
+      tl = new TimelineMax();
 
-addMenuActiveclass();
+      TweenMax.staggerFromTo('#letters path', 1, {drawSVG: "0%"}, {drawSVG: "100%", drawSVG: true, ease: Linear.easeNone, delay: 0.3}, 1);
+      console.log('hmmm');
+
+}
+
 smoothScrollWithoutHash( 'a[href*="#"]' );
 updateMenuOnScroll();
+// addMenuActiveclass();
+drawElement();

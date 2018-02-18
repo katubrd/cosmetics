@@ -120,16 +120,9 @@ h1 {
   left: 33%;
 }
 
-.logo-code-class {
-  width: 100%;
-  height: auto;
-}
-
-.logo-svg-class {
-  fill:#FFFFFF;
-  stroke:#FFFFFF;
-  stroke-miterlimit:10;
-}
+/* #logoSVG {
+  mask: url(#logoMask);
+} */
 
 #mission {
   position: relative;
@@ -144,13 +137,15 @@ h1 {
   opacity : 0;
 }
 
-#mission > h4 {
-  font-size: 13vh;
-  top: 23vh;
-  left: 19.7vw;
-  margin: 0;
+.container-mission {
+  width: 50%;
+  left: 14.7vw;
+}
+
+.container-mission > h4 {
+  font-size: 11vh;
   padding: 0;
-  width: 33%;
+  width: 77%;
   font-family: 'alterlightregular';
   line-height: 13vh;
 }

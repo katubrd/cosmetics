@@ -57,13 +57,26 @@ function drawElement(){
       group = document.getElementById('letters'),
       paths = document.getElementsByTagName('path'),
       tl = new TimelineMax();
-
       TweenMax.staggerFromTo('#letters path', 1, {drawSVG: "0%"}, {drawSVG: "100%", drawSVG: true, ease: Linear.easeNone, delay: 0.3}, 1);
-      console.log('hmmm');
+}
+//in cosmtic section header animation
+function lettersAnimation(){
+  let natural = document.getElementById('n'),
+      beauty = document.getElementById('b'),
+      pure = document.getElementById('p'),
+      minerals = document.getElementById('m'),
+      naturalSplit = new SplitText(natural, {type: "chars"}),
+      tl = new TimelineMax();
+      tl.set([natural, beauty, pure, minerals], {opacity:0});
+      TweenMax.fromTo(natural, 3, {opacity: 0, fontSize: 0, left: 0}, {opacity: 1, fontSize: '7em', left: '17vw', ease:Back.easeInOut}, '+=1');
+
+
+
 
 }
 
 smoothScrollWithoutHash( 'a[href*="#"]' );
 updateMenuOnScroll();
 // addMenuActiveclass();
-drawElement();
+// drawElement();
+lettersAnimation();

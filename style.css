@@ -174,9 +174,18 @@ h1 {
   justify-items: center;
 }
 
+.cosmetic-header {
+  height: 100vh;
+  position: relative;
+}
+
+.cosmetic-header > * {
+  position: absolute;
+}
+
 .salt {
   width: 73%;
-  height: 73vh;
+  height: 75vh;
   margin-bottom: 7vh;
   margin-top: 3vh;
   position: relative;
